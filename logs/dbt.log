@@ -1,0 +1,1000 @@
+
+
+============================== 2024-10-26 21:49:23.271018 | e4ec88f4-84ab-43f4-93ba-a38fb4216fdf ==============================
+[0m21:49:23.271018 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:49:23.272246 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m21:49:23.272470 [debug] [MainThread]: Tracking: tracking
+[0m21:49:23.284741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120b7cd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120b6f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120b8db50>]}
+[0m21:49:23.298977 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:49:23.299356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e4ec88f4-84ab-43f4-93ba-a38fb4216fdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120b8dc40>]}
+[0m21:49:23.764601 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m21:49:23.771104 [debug] [MainThread]: 1699: static parser successfully parsed silver/silver_products.sql
+[0m21:49:23.787329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120d27280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120dba2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120dba460>]}
+[0m21:49:23.787542 [debug] [MainThread]: Flushing usage events
+[0m21:49:24.346064 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.silver_products_project.stg_products' (models/staging/stg_products.sql) depends on a source named 'raw_data.products' which was not found
+
+
+============================== 2024-10-26 21:51:18.007031 | 3a68e6ce-90e9-4c77-aedb-e5796d330235 ==============================
+[0m21:51:18.007031 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:51:18.008559 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m21:51:18.008767 [debug] [MainThread]: Tracking: tracking
+[0m21:51:18.020966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cdb4dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cd7fd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cdc8b50>]}
+[0m21:51:18.029810 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:51:18.030092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3a68e6ce-90e9-4c77-aedb-e5796d330235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cdc8dc0>]}
+[0m21:51:18.487822 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m21:51:18.494314 [debug] [MainThread]: 1699: static parser successfully parsed silver/silver_products.sql
+[0m21:51:18.521592 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.silver_products_project.example
+[0m21:51:18.524591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3a68e6ce-90e9-4c77-aedb-e5796d330235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cf949d0>]}
+[0m21:51:18.528038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3a68e6ce-90e9-4c77-aedb-e5796d330235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cdc89d0>]}
+[0m21:51:18.528239 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:51:18.528478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a68e6ce-90e9-4c77-aedb-e5796d330235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cfa8a00>]}
+[0m21:51:18.529090 [info ] [MainThread]: 
+[0m21:51:18.529973 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:51:18.530551 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m21:51:18.538264 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:51:18.538520 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:51:18.538739 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m21:51:18.538878 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:19.490646 [debug] [ThreadPool]: SQL status: OK in 0.95 seconds
+[0m21:51:19.514919 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:51:19.515266 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m21:51:20.021200 [debug] [ThreadPool]: SQL status: OK in 0.51 seconds
+[0m21:51:20.027608 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m21:51:20.028313 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:51:20.028768 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m21:51:20.245977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a68e6ce-90e9-4c77-aedb-e5796d330235', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cf5ef40>]}
+[0m21:51:20.247321 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:20.247929 [info ] [MainThread]: 
+[0m21:51:20.262965 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m21:51:20.263627 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m21:51:20.263931 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m21:51:20.268270 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m21:51:20.269171 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 21:51:20.264163 => 2024-10-26 21:51:20.269115
+[0m21:51:20.269426 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m21:51:20.269655 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 21:51:20.269615 => 2024-10-26 21:51:20.269627
+[0m21:51:20.271136 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m21:51:20.271645 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m21:51:20.272145 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m21:51:20.272373 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m21:51:20.274591 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m21:51:20.275085 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 21:51:20.272548 => 2024-10-26 21:51:20.275052
+[0m21:51:20.275312 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m21:51:20.275517 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 21:51:20.275487 => 2024-10-26 21:51:20.275492
+[0m21:51:20.276007 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m21:51:20.276529 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:20.276732 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m21:51:20.277007 [debug] [MainThread]: Command end result
+[0m21:51:20.281993 [info ] [MainThread]: Done.
+[0m21:51:20.282342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d105cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d105d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d105d60>]}
+[0m21:51:20.282583 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 21:53:15.262435 | 7cf77e62-0f39-43fd-bef7-8230bec9dd19 ==============================
+[0m21:53:15.262435 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:53:15.263834 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m21:53:15.264068 [debug] [MainThread]: Tracking: tracking
+[0m21:53:15.275399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b87be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b83e790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b88d1f0>]}
+[0m21:53:15.316543 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:53:15.316760 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:53:15.317124 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.silver_products_project.example
+[0m21:53:15.321167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7cf77e62-0f39-43fd-bef7-8230bec9dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ba290d0>]}
+[0m21:53:15.325203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7cf77e62-0f39-43fd-bef7-8230bec9dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9742e0>]}
+[0m21:53:15.325456 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:53:15.325701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7cf77e62-0f39-43fd-bef7-8230bec9dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b83e790>]}
+[0m21:53:15.326331 [info ] [MainThread]: 
+[0m21:53:15.326630 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:53:15.326862 [debug] [MainThread]: Command end result
+[0m21:53:15.329896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b87be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9e9e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9e9df0>]}
+[0m21:53:15.330075 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 21:55:14.826071 | 33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0 ==============================
+[0m21:55:14.826071 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:55:14.827586 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'parse_only': False, 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+[0m21:55:14.827822 [debug] [MainThread]: Tracking: tracking
+[0m21:55:14.839364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb40d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eaff160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb51a60>]}
+[0m21:55:14.852842 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:55:14.853147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb40e50>]}
+[0m21:55:15.312091 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m21:55:15.318794 [debug] [MainThread]: 1699: static parser successfully parsed silver/silver_products.sql
+[0m21:55:15.348891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ed11d90>]}
+[0m21:55:15.352308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ed5b8b0>]}
+[0m21:55:15.352503 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:55:15.352742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb7ac10>]}
+[0m21:55:15.353367 [info ] [MainThread]: 
+[0m21:55:15.354231 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:55:15.354740 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m21:55:15.362507 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:55:15.362761 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:55:15.362978 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m21:55:15.363113 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:55:16.167785 [debug] [ThreadPool]: SQL status: OK in 0.8 seconds
+[0m21:55:16.189505 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:55:16.189799 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m21:55:16.614716 [debug] [ThreadPool]: SQL status: OK in 0.42 seconds
+[0m21:55:16.620230 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m21:55:16.620716 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:55:16.621101 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m21:55:16.831618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '33fdd55d-2d1e-4b87-8fc6-a0fccc3bb1c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eb724c0>]}
+[0m21:55:16.832772 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:55:16.833379 [info ] [MainThread]: 
+[0m21:55:16.847425 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m21:55:16.848128 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m21:55:16.848436 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m21:55:16.851356 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m21:55:16.851882 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 21:55:16.848672 => 2024-10-26 21:55:16.851830
+[0m21:55:16.852133 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m21:55:16.852363 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 21:55:16.852327 => 2024-10-26 21:55:16.852336
+[0m21:55:16.853838 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m21:55:16.854353 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m21:55:16.854927 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m21:55:16.855216 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m21:55:16.858900 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m21:55:16.859327 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 21:55:16.855404 => 2024-10-26 21:55:16.859294
+[0m21:55:16.859545 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m21:55:16.859738 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 21:55:16.859710 => 2024-10-26 21:55:16.859715
+[0m21:55:16.860231 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m21:55:16.860757 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:55:16.860963 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m21:55:16.861254 [debug] [MainThread]: Command end result
+[0m21:55:16.866447 [info ] [MainThread]: Done.
+[0m21:55:16.866784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ee67cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ed23a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eeaf070>]}
+[0m21:55:16.867019 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 21:55:22.584959 | 64a3fcb5-ef05-481c-8158-e7bca48f3ff2 ==============================
+[0m21:55:22.584959 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:55:22.586128 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m21:55:22.586310 [debug] [MainThread]: Tracking: tracking
+[0m21:55:22.597177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fce7cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fcae130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe0ca60>]}
+[0m21:55:22.626373 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:55:22.626570 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:55:22.630351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '64a3fcb5-ef05-481c-8158-e7bca48f3ff2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ffa50d0>]}
+[0m21:55:22.634712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '64a3fcb5-ef05-481c-8158-e7bca48f3ff2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ff732e0>]}
+[0m21:55:22.634944 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:55:22.635182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '64a3fcb5-ef05-481c-8158-e7bca48f3ff2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fcae130>]}
+[0m21:55:22.635879 [info ] [MainThread]: 
+[0m21:55:22.636251 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:55:22.636503 [debug] [MainThread]: Command end result
+[0m21:55:22.640740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe0c730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe0c970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ff6adc0>]}
+[0m21:55:22.640938 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 21:56:19.996767 | 4ce41378-45a2-4b28-9d5a-3e92e458715d ==============================
+[0m21:56:19.996767 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:56:19.998212 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m21:56:19.998437 [debug] [MainThread]: Tracking: tracking
+[0m21:56:20.011154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1242f9ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1242c7dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12430ba60>]}
+[0m21:56:20.040845 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:56:20.041040 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:56:20.044911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4ce41378-45a2-4b28-9d5a-3e92e458715d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1244a20d0>]}
+[0m21:56:20.048832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4ce41378-45a2-4b28-9d5a-3e92e458715d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1243fa2e0>]}
+[0m21:56:20.049032 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:56:20.049258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4ce41378-45a2-4b28-9d5a-3e92e458715d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1242f9dc0>]}
+[0m21:56:20.049940 [info ] [MainThread]: 
+[0m21:56:20.050859 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:56:20.051391 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m21:56:20.059104 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:56:20.059358 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:56:20.059571 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m21:56:20.059710 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:56:21.081988 [debug] [ThreadPool]: SQL status: OK in 1.02 seconds
+[0m21:56:21.106314 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:56:21.106600 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m21:56:21.680975 [debug] [ThreadPool]: SQL status: OK in 0.57 seconds
+[0m21:56:21.686871 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m21:56:21.687488 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:56:21.688053 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m21:56:21.911751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4ce41378-45a2-4b28-9d5a-3e92e458715d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12432eaf0>]}
+[0m21:56:21.912956 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:56:21.913566 [info ] [MainThread]: 
+[0m21:56:21.928221 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m21:56:21.928959 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m21:56:21.929263 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m21:56:21.932347 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m21:56:21.933137 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 21:56:21.929496 => 2024-10-26 21:56:21.933058
+[0m21:56:21.933395 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m21:56:21.933636 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 21:56:21.933593 => 2024-10-26 21:56:21.933609
+[0m21:56:21.935033 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m21:56:21.935535 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m21:56:21.936136 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m21:56:21.936433 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m21:56:21.938897 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m21:56:21.939574 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 21:56:21.936627 => 2024-10-26 21:56:21.939536
+[0m21:56:21.939797 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m21:56:21.939989 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 21:56:21.939960 => 2024-10-26 21:56:21.939966
+[0m21:56:21.940506 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m21:56:21.941091 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:56:21.941272 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m21:56:21.941549 [debug] [MainThread]: Command end result
+[0m21:56:21.946226 [info ] [MainThread]: Done.
+[0m21:56:21.949076 [debug] [MainThread]: Acquiring new databricks connection 'generate_catalog'
+[0m21:56:21.949256 [info ] [MainThread]: Building catalog
+[0m21:56:21.950135 [debug] [ThreadPool]: Acquiring new databricks connection 'jaws'
+[0m21:56:21.954329 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:56:21.954515 [debug] [ThreadPool]: Using databricks connection "jaws"
+[0m21:56:21.954687 [debug] [ThreadPool]: On jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "jaws"} */
+show table extended in `jaws` like 'stg_products|silver_products'
+  
+[0m21:56:21.954850 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:56:22.603321 [debug] [ThreadPool]: SQL status: OK in 0.65 seconds
+[0m21:56:22.607819 [debug] [ThreadPool]: On jaws: ROLLBACK
+[0m21:56:22.608288 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:56:22.608667 [debug] [ThreadPool]: On jaws: Close
+[0m21:56:22.814265 [debug] [ThreadPool]: Acquiring new databricks connection 'raw_data'
+[0m21:56:22.822255 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:56:22.822701 [debug] [ThreadPool]: Using databricks connection "raw_data"
+[0m21:56:22.823074 [debug] [ThreadPool]: On raw_data: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "raw_data"} */
+show table extended in `raw_data` like 'bronze_products'
+  
+[0m21:56:22.823373 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:56:23.386359 [debug] [ThreadPool]: Databricks adapter: Error while running:
+/* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "raw_data"} */
+show table extended in `raw_data` like 'bronze_products'
+  
+[0m21:56:23.387935 [debug] [ThreadPool]: Databricks adapter: <class 'databricks.sql.exc.ServerOperationError'>: [SCHEMA_NOT_FOUND] The schema `raw_data` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+To tolerate the error on drop use DROP SCHEMA IF EXISTS. SQLSTATE: 42704
+[0m21:56:23.388493 [debug] [ThreadPool]: Databricks adapter: diagnostic-info: org.apache.hive.service.cli.HiveSQLException: Error running query: [SCHEMA_NOT_FOUND] org.apache.spark.sql.catalyst.analysis.NoSuchDatabaseException: [SCHEMA_NOT_FOUND] The schema `raw_data` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+To tolerate the error on drop use DROP SCHEMA IF EXISTS. SQLSTATE: 42704
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:787)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.unity.EmptyHandle$.runWith(UCSHandle.scala:133)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:625)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$5(SparkExecuteStatementOperation.scala:469)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.SQLExecution$.withRootExecution(SQLExecution.scala:704)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:469)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)
+	at com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionContext(DatabricksSparkUsageLogger.scala:27)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags(DatabricksSparkUsageLogger.scala:27)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags0(DatabricksSparkUsageLogger.scala:74)
+	at com.databricks.spark.util.DatabricksSparkUsageLogger.withAttributionTags(DatabricksSparkUsageLogger.scala:174)
+	at com.databricks.spark.util.UsageLogging.$anonfun$withAttributionTags$1(UsageLogger.scala:617)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:729)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:738)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags(UsageLogger.scala:617)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags$(UsageLogger.scala:615)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withAttributionTags(SparkExecuteStatementOperation.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$11(ThriftLocalProperties.scala:195)
+	at com.databricks.spark.util.IdentityClaim$.withClaim(IdentityClaim.scala:48)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:190)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:446)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:432)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:482)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.spark.sql.catalyst.analysis.NoSuchDatabaseException: [SCHEMA_NOT_FOUND] The schema `raw_data` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+To tolerate the error on drop use DROP SCHEMA IF EXISTS. SQLSTATE: 42704
+	at org.apache.spark.sql.catalyst.catalog.SessionCatalogImpl.requireDbExists(SessionCatalog.scala:818)
+	at org.apache.spark.sql.catalyst.catalog.SessionCatalogImpl.doListTables(SessionCatalog.scala:1827)
+	at com.databricks.sql.managedcatalog.ManagedCatalogSessionCatalog.doListTables(ManagedCatalogSessionCatalog.scala:1738)
+	at com.databricks.sql.managedcatalog.ManagedCatalogSessionCatalog.doListTables(ManagedCatalogSessionCatalog.scala:1872)
+	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.listTables(SessionCatalog.scala:316)
+	at org.apache.spark.sql.execution.command.ShowTablesCommand.$anonfun$run$46(tables.scala:1261)
+	at scala.Option.map(Option.scala:230)
+	at org.apache.spark.sql.execution.command.ShowTablesCommand.run(tables.scala:1261)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.$anonfun$sideEffectResult$2(commands.scala:84)
+	at org.apache.spark.sql.execution.SparkPlan.runCommandWithAetherOff(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.runCommandInAetherOrSpark(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.$anonfun$sideEffectResult$1(commands.scala:84)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:94)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:81)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:80)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.$anonfun$applyOrElse$5(QueryExecution.scala:385)
+	at com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.$anonfun$applyOrElse$4(QueryExecution.scala:385)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:195)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.$anonfun$applyOrElse$3(QueryExecution.scala:385)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$10(SQLExecution.scala:455)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:793)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$1(SQLExecution.scala:333)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:1184)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId0(SQLExecution.scala:204)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:730)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.$anonfun$applyOrElse$2(QueryExecution.scala:381)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:1177)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.$anonfun$applyOrElse$1(QueryExecution.scala:377)
+	at org.apache.spark.sql.execution.QueryExecution.org$apache$spark$sql$execution$QueryExecution$$withMVTagsIfNecessary(QueryExecution.scala:327)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.applyOrElse(QueryExecution.scala:374)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$$nestedInanonfun$eagerlyExecuteCommands$1$1.applyOrElse(QueryExecution.scala:349)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:505)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:85)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:505)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:40)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:379)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:375)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:40)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:40)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:481)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$eagerlyExecuteCommands$1(QueryExecution.scala:349)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:436)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:349)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:286)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:283)
+	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:343)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.getOrCreateDF(SparkExecuteStatementOperation.scala:567)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.analyzeQuery(SparkExecuteStatementOperation.scala:590)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$5(SparkExecuteStatementOperation.scala:664)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:537)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:664)
+	... 42 more
+
+[0m21:56:23.388993 [debug] [ThreadPool]: Databricks adapter: operation-id: b'\x01\xef\x93\xe5#\xfa\x1b\x08\x90\xae\x96\xdb\xa0\xc9S\xc3'
+[0m21:56:23.389795 [debug] [ThreadPool]: Databricks adapter: Error while running:
+macro show_table_extended
+[0m21:56:23.391096 [debug] [ThreadPool]: Databricks adapter: Runtime Error
+  [SCHEMA_NOT_FOUND] The schema `raw_data` cannot be found. Verify the spelling and correctness of the schema and catalog.
+  If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+  To tolerate the error on drop use DROP SCHEMA IF EXISTS. SQLSTATE: 42704
+[0m21:56:23.392178 [debug] [ThreadPool]: On raw_data: ROLLBACK
+[0m21:56:23.392832 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:56:23.393285 [debug] [ThreadPool]: On raw_data: Close
+[0m21:56:23.712509 [info ] [MainThread]: Catalog written to /Users/kubaw/Documents/workspace-git/dpp2024-autumn-lab12-dbt/silver_products_project/target/catalog.json
+[0m21:56:23.713410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1242f9ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1246e03d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1246e0130>]}
+[0m21:56:23.713904 [debug] [MainThread]: Flushing usage events
+[0m21:56:24.267275 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m21:56:24.268162 [debug] [MainThread]: Connection 'raw_data' was properly closed.
+
+
+============================== 2024-10-26 21:56:30.184847 | 558d9b5c-60a4-46cd-9166-6b508f09c16f ==============================
+[0m21:56:30.184847 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:56:30.186032 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'port': 8080, 'open_browser': True, 'which': 'serve', 'indirect_selection': 'eager'}
+[0m21:56:30.186201 [debug] [MainThread]: Tracking: tracking
+[0m21:56:30.196813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125a3abe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125a06a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125a4ca90>]}
+[0m21:56:30.199108 [info ] [MainThread]: Serving docs at 0.0.0.0:8080
+[0m21:56:30.199456 [info ] [MainThread]: To access from your browser, navigate to:  http://localhost:8080
+[0m21:56:30.199712 [info ] [MainThread]: 
+[0m21:56:30.199920 [info ] [MainThread]: 
+[0m21:56:30.200114 [info ] [MainThread]: Press Ctrl+C to exit.
+[0m21:57:04.976191 [debug] [MainThread]: Flushing usage events
+[0m21:57:05.518957 [info ] [MainThread]: ctrl-c
+
+
+============================== 2024-10-26 21:57:22.213692 | 2a3cf8eb-94fb-49e3-b351-3ef4bf341ace ==============================
+[0m21:57:22.213692 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:57:22.215102 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:57:22.215312 [debug] [MainThread]: Tracking: tracking
+[0m21:57:22.227763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145564d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14552ffa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145575a60>]}
+[0m21:57:22.259848 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:57:22.260049 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:57:22.263997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a3cf8eb-94fb-49e3-b351-3ef4bf341ace', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14570d0d0>]}
+[0m21:57:22.267878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a3cf8eb-94fb-49e3-b351-3ef4bf341ace', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14565c310>]}
+[0m21:57:22.268099 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:57:22.268333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a3cf8eb-94fb-49e3-b351-3ef4bf341ace', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14552ffa0>]}
+[0m21:57:22.269018 [info ] [MainThread]: 
+[0m21:57:22.269921 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:57:22.270463 [debug] [ThreadPool]: Acquiring new databricks connection 'list_schemas'
+[0m21:57:22.276217 [debug] [ThreadPool]: Using databricks connection "list_schemas"
+[0m21:57:22.276456 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m21:57:22.276611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:57:22.854128 [debug] [ThreadPool]: SQL status: OK in 0.58 seconds
+[0m21:57:22.872224 [debug] [ThreadPool]: On list_schemas: Close
+[0m21:57:23.091804 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m21:57:23.111786 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:23.112197 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:57:23.112526 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m21:57:23.112837 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:57:23.839717 [debug] [ThreadPool]: SQL status: OK in 0.73 seconds
+[0m21:57:23.856101 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:57:23.856500 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m21:57:24.298737 [debug] [ThreadPool]: SQL status: OK in 0.44 seconds
+[0m21:57:24.306191 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m21:57:24.307015 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:57:24.307593 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m21:57:24.525288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a3cf8eb-94fb-49e3-b351-3ef4bf341ace', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14565c2e0>]}
+[0m21:57:24.526219 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:24.526701 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m21:57:24.527803 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:57:24.528386 [info ] [MainThread]: 
+[0m21:57:24.543586 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m21:57:24.544081 [info ] [Thread-1  ]: 1 of 2 START sql view model jaws.stg_products .................................. [RUN]
+[0m21:57:24.544884 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m21:57:24.545169 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m21:57:24.548437 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m21:57:24.549148 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 21:57:24.545406 => 2024-10-26 21:57:24.549088
+[0m21:57:24.549405 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m21:57:24.570781 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.stg_products"
+[0m21:57:24.571426 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:24.571608 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.stg_products"
+[0m21:57:24.571790 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.stg_products"} */
+create or replace view `jaws`.`stg_products`
+  
+  
+  as
+    -- models/staging/products/stg_products.sql
+WITH source_data AS (
+    SELECT *
+    FROM `raw_data`.`bronze_products`
+)
+SELECT * FROM source_data
+
+[0m21:57:24.571949 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:57:25.160278 [debug] [Thread-1  ]: Databricks adapter: Error while running:
+/* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.stg_products"} */
+create or replace view `jaws`.`stg_products`
+  
+  
+  as
+    -- models/staging/products/stg_products.sql
+WITH source_data AS (
+    SELECT *
+    FROM `raw_data`.`bronze_products`
+)
+SELECT * FROM source_data
+
+[0m21:57:25.161019 [debug] [Thread-1  ]: Databricks adapter: <class 'databricks.sql.exc.ServerOperationError'>: [TABLE_OR_VIEW_NOT_FOUND] The table or view `raw_data`.`bronze_products` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS. SQLSTATE: 42P01; line 9 pos 9
+[0m21:57:25.161446 [debug] [Thread-1  ]: Databricks adapter: diagnostic-info: org.apache.hive.service.cli.HiveSQLException: Error running query: [TABLE_OR_VIEW_NOT_FOUND] org.apache.spark.sql.catalyst.ExtendedAnalysisException: [TABLE_OR_VIEW_NOT_FOUND] The table or view `raw_data`.`bronze_products` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS. SQLSTATE: 42P01; line 9 pos 9
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:787)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.unity.EmptyHandle$.runWith(UCSHandle.scala:133)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:625)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$5(SparkExecuteStatementOperation.scala:469)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.SQLExecution$.withRootExecution(SQLExecution.scala:704)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:469)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:48)
+	at com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:276)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:272)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:46)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:43)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionContext(DatabricksSparkUsageLogger.scala:27)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:95)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:76)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags(DatabricksSparkUsageLogger.scala:27)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags0(DatabricksSparkUsageLogger.scala:74)
+	at com.databricks.spark.util.DatabricksSparkUsageLogger.withAttributionTags(DatabricksSparkUsageLogger.scala:174)
+	at com.databricks.spark.util.UsageLogging.$anonfun$withAttributionTags$1(UsageLogger.scala:617)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:729)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:738)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags(UsageLogger.scala:617)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags$(UsageLogger.scala:615)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withAttributionTags(SparkExecuteStatementOperation.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$11(ThriftLocalProperties.scala:195)
+	at com.databricks.spark.util.IdentityClaim$.withClaim(IdentityClaim.scala:48)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:190)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:71)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:446)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:432)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:482)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.spark.sql.catalyst.ExtendedAnalysisException: [TABLE_OR_VIEW_NOT_FOUND] The table or view `raw_data`.`bronze_products` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS. SQLSTATE: 42P01; line 9 pos 9
+	at org.apache.spark.sql.catalyst.ExtendedAnalysisException.copyPlan(ExtendedAnalysisException.scala:91)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:757)
+	... 42 more
+
+[0m21:57:25.161881 [debug] [Thread-1  ]: Databricks adapter: operation-id: b'\x01\xef\x93\xe5H\xc8\x190\x8a\x98\xfd;\xf1\x98\xcd\x83'
+[0m21:57:25.162768 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 21:57:24.549593 => 2024-10-26 21:57:25.162618
+[0m21:57:25.163323 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: ROLLBACK
+[0m21:57:25.163738 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m21:57:25.164108 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: Close
+[0m21:57:25.419123 [debug] [Thread-1  ]: Runtime Error in model stg_products (models/staging/stg_products.sql)
+  [TABLE_OR_VIEW_NOT_FOUND] The table or view `raw_data`.`bronze_products` cannot be found. Verify the spelling and correctness of the schema and catalog.
+  If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+  To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS. SQLSTATE: 42P01; line 9 pos 9
+[0m21:57:25.419477 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a3cf8eb-94fb-49e3-b351-3ef4bf341ace', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14599cd90>]}
+[0m21:57:25.419826 [error] [Thread-1  ]: 1 of 2 ERROR creating sql view model jaws.stg_products ......................... [[31mERROR[0m in 0.87s]
+[0m21:57:25.420891 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m21:57:25.421358 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m21:57:25.421638 [info ] [Thread-1  ]: 2 of 2 SKIP relation jaws.silver_products ...................................... [[33mSKIP[0m]
+[0m21:57:25.422011 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m21:57:25.422796 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:57:25.423022 [debug] [MainThread]: On master: ROLLBACK
+[0m21:57:25.423209 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:57:25.634693 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m21:57:25.636039 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:25.636893 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m21:57:25.637753 [debug] [MainThread]: On master: ROLLBACK
+[0m21:57:25.638176 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m21:57:25.638539 [debug] [MainThread]: On master: Close
+[0m21:57:25.853163 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:57:25.853650 [debug] [MainThread]: Connection 'model.silver_products_project.stg_products' was properly closed.
+[0m21:57:25.854962 [info ] [MainThread]: 
+[0m21:57:25.855546 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 3.59 seconds (3.59s).
+[0m21:57:25.856266 [debug] [MainThread]: Command end result
+[0m21:57:25.868375 [info ] [MainThread]: 
+[0m21:57:25.868848 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:57:25.869221 [info ] [MainThread]: 
+[0m21:57:25.869591 [error] [MainThread]: [33mRuntime Error in model stg_products (models/staging/stg_products.sql)[0m
+[0m21:57:25.869947 [error] [MainThread]:   [TABLE_OR_VIEW_NOT_FOUND] The table or view `raw_data`.`bronze_products` cannot be found. Verify the spelling and correctness of the schema and catalog.
+[0m21:57:25.870291 [error] [MainThread]:   If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+[0m21:57:25.870640 [error] [MainThread]:   To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS. SQLSTATE: 42P01; line 9 pos 9
+[0m21:57:25.870984 [info ] [MainThread]: 
+[0m21:57:25.871346 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m21:57:25.871753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145956fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145956040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145956490>]}
+[0m21:57:25.872030 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 21:57:52.528160 | a9d04987-fad0-487e-b3ce-34f6832f8876 ==============================
+[0m21:57:52.528160 [info ] [MainThread]: Running with dbt=1.4.1
+[0m21:57:52.529556 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m21:57:52.529774 [debug] [MainThread]: Tracking: tracking
+[0m21:57:52.540354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fd84ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fd4ad30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fd95a60>]}
+[0m21:57:52.575528 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m21:57:52.575899 [debug] [MainThread]: Partial parsing: updated file: silver_products_project://models/staging/products_sources.yml
+[0m21:57:52.576055 [debug] [MainThread]: Partial parsing: updated file: silver_products_project://models/staging/stg_products.sql
+[0m21:57:52.584884 [debug] [MainThread]: 1699: static parser successfully parsed silver/silver_products.sql
+[0m21:57:52.592277 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m21:57:52.605528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x140220f40>]}
+[0m21:57:52.609235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14012ae50>]}
+[0m21:57:52.609444 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m21:57:52.609673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b66b20>]}
+[0m21:57:52.610300 [info ] [MainThread]: 
+[0m21:57:52.611199 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:57:52.611718 [debug] [ThreadPool]: Acquiring new databricks connection 'list_schemas'
+[0m21:57:52.617067 [debug] [ThreadPool]: Using databricks connection "list_schemas"
+[0m21:57:52.617306 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m21:57:52.617455 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:57:53.219141 [debug] [ThreadPool]: SQL status: OK in 0.6 seconds
+[0m21:57:53.235106 [debug] [ThreadPool]: On list_schemas: Close
+[0m21:57:53.441111 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m21:57:53.458381 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:53.458763 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:57:53.459080 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m21:57:53.459387 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:57:54.149700 [debug] [ThreadPool]: SQL status: OK in 0.69 seconds
+[0m21:57:54.165898 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m21:57:54.166285 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m21:57:54.660860 [debug] [ThreadPool]: SQL status: OK in 0.49 seconds
+[0m21:57:54.665007 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m21:57:54.665454 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m21:57:54.665831 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m21:57:54.880443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1401f0dc0>]}
+[0m21:57:54.881185 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:54.881659 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m21:57:54.882651 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:57:54.883223 [info ] [MainThread]: 
+[0m21:57:54.897619 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m21:57:54.898076 [info ] [Thread-1  ]: 1 of 2 START sql view model jaws.stg_products .................................. [RUN]
+[0m21:57:54.898894 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m21:57:54.899186 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m21:57:54.902051 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m21:57:54.902563 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 21:57:54.899420 => 2024-10-26 21:57:54.902510
+[0m21:57:54.902811 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m21:57:54.924217 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.stg_products"
+[0m21:57:54.924588 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:54.924763 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.stg_products"
+[0m21:57:54.924944 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.stg_products"} */
+create or replace view `jaws`.`stg_products`
+  
+  
+  as
+    -- models/staging/products/stg_products.sql
+WITH source_data AS (
+    SELECT *
+    FROM `jaws`.`bronze_products`
+)
+SELECT * FROM source_data
+
+[0m21:57:54.925099 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:57:56.638212 [debug] [Thread-1  ]: SQL status: OK in 1.71 seconds
+[0m21:57:56.656929 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 21:57:54.903000 => 2024-10-26 21:57:56.656854
+[0m21:57:56.657300 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: ROLLBACK
+[0m21:57:56.657563 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m21:57:56.657800 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: Close
+[0m21:57:56.871023 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14023c910>]}
+[0m21:57:56.872777 [info ] [Thread-1  ]: 1 of 2 OK created sql view model jaws.stg_products ............................. [[32mOK[0m in 1.97s]
+[0m21:57:56.876259 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m21:57:56.877819 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m21:57:56.878562 [info ] [Thread-1  ]: 2 of 2 START sql view model jaws.silver_products ............................... [RUN]
+[0m21:57:56.880108 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m21:57:56.880600 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m21:57:56.885933 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m21:57:56.887004 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 21:57:56.881014 => 2024-10-26 21:57:56.886924
+[0m21:57:56.887427 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m21:57:56.893554 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.silver_products"
+[0m21:57:56.894377 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:56.894695 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.silver_products"
+[0m21:57:56.895013 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.silver_products"} */
+create or replace view `jaws`.`silver_products`
+  
+  
+  as
+    -- models/silver/silver_products.sql
+WITH products AS (
+    SELECT * FROM `jaws`.`stg_products`
+)
+
+SELECT
+    *
+FROM products
+
+[0m21:57:56.895280 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:57:58.450435 [debug] [Thread-1  ]: SQL status: OK in 1.55 seconds
+[0m21:57:58.455581 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 21:57:56.887736 => 2024-10-26 21:57:58.455448
+[0m21:57:58.456253 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: ROLLBACK
+[0m21:57:58.456723 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m21:57:58.457146 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: Close
+[0m21:57:58.674675 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9d04987-fad0-487e-b3ce-34f6832f8876', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14023cfa0>]}
+[0m21:57:58.676396 [info ] [Thread-1  ]: 2 of 2 OK created sql view model jaws.silver_products .......................... [[32mOK[0m in 1.80s]
+[0m21:57:58.677362 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m21:57:58.679931 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:57:58.680528 [debug] [MainThread]: On master: ROLLBACK
+[0m21:57:58.681035 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:57:58.889006 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m21:57:58.890359 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m21:57:58.890899 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m21:57:58.891424 [debug] [MainThread]: On master: ROLLBACK
+[0m21:57:58.891881 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m21:57:58.892329 [debug] [MainThread]: On master: Close
+[0m21:57:59.092159 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:57:59.094096 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m21:57:59.095646 [info ] [MainThread]: 
+[0m21:57:59.096303 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 6.49 seconds (6.49s).
+[0m21:57:59.097077 [debug] [MainThread]: Command end result
+[0m21:57:59.106709 [info ] [MainThread]: 
+[0m21:57:59.107288 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:57:59.107717 [info ] [MainThread]: 
+[0m21:57:59.108094 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m21:57:59.108561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1401ab490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1402d8f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fd4ad30>]}
+[0m21:57:59.108911 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 22:02:31.841087 | b5201642-6d9b-4e88-97da-33b4faa389fc ==============================
+[0m22:02:31.841087 [info ] [MainThread]: Running with dbt=1.4.1
+[0m22:02:31.842584 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m22:02:31.842807 [debug] [MainThread]: Tracking: tracking
+[0m22:02:31.855704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b054c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b02b160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b065a60>]}
+[0m22:02:31.885800 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m22:02:31.886061 [debug] [MainThread]: Partial parsing: added file: silver_products_project://models/staging/dbt_joined_events_products.sql
+[0m22:02:31.886325 [debug] [MainThread]: Partial parsing: updated file: silver_products_project://models/staging/products_sources.yml
+[0m22:02:31.895369 [debug] [MainThread]: 1699: static parser successfully parsed staging/dbt_joined_events_products.sql
+[0m22:02:31.902860 [debug] [MainThread]: 1699: static parser successfully parsed silver/silver_products.sql
+[0m22:02:31.904683 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m22:02:31.919387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5201642-6d9b-4e88-97da-33b4faa389fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b4a20d0>]}
+[0m22:02:31.923319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5201642-6d9b-4e88-97da-33b4faa389fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b2f3250>]}
+[0m22:02:31.923537 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m22:02:31.923761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5201642-6d9b-4e88-97da-33b4faa389fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b268b0>]}
+[0m22:02:31.924364 [info ] [MainThread]: 
+[0m22:02:31.924710 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m22:02:31.924941 [debug] [MainThread]: Command end result
+[0m22:02:31.928253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b469880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b2eaf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b2eae50>]}
+[0m22:02:31.928422 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-10-26 22:02:40.393381 | ccf5c876-ac5c-4db8-a068-8719d82ee624 ==============================
+[0m22:02:40.393381 [info ] [MainThread]: Running with dbt=1.4.1
+[0m22:02:40.394545 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m22:02:40.394730 [debug] [MainThread]: Tracking: tracking
+[0m22:02:40.404842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d339cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d3070d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d34ba60>]}
+[0m22:02:40.434914 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:02:40.435110 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:02:40.438934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ccf5c876-ac5c-4db8-a068-8719d82ee624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d4eee50>]}
+[0m22:02:40.442500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ccf5c876-ac5c-4db8-a068-8719d82ee624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d434a60>]}
+[0m22:02:40.442702 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m22:02:40.442936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ccf5c876-ac5c-4db8-a068-8719d82ee624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d339df0>]}
+[0m22:02:40.443651 [info ] [MainThread]: 
+[0m22:02:40.444564 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:02:40.445120 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m22:02:40.453108 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m22:02:40.453402 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m22:02:40.453639 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m22:02:40.453784 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:02:41.529908 [debug] [ThreadPool]: SQL status: OK in 1.08 seconds
+[0m22:02:41.556205 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m22:02:41.556511 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m22:02:41.969206 [debug] [ThreadPool]: SQL status: OK in 0.41 seconds
+[0m22:02:41.973667 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m22:02:41.974100 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m22:02:41.974429 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m22:02:42.170594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ccf5c876-ac5c-4db8-a068-8719d82ee624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d4ee0d0>]}
+[0m22:02:42.172022 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:02:42.172757 [info ] [MainThread]: 
+[0m22:02:42.189167 [debug] [Thread-1  ]: Began running node model.silver_products_project.dbt_joined_events_products
+[0m22:02:42.190001 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.dbt_joined_events_products'
+[0m22:02:42.190373 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.dbt_joined_events_products
+[0m22:02:42.194287 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.dbt_joined_events_products"
+[0m22:02:42.194954 [debug] [Thread-1  ]: Timing info for model.silver_products_project.dbt_joined_events_products (compile): 2024-10-26 22:02:42.190651 => 2024-10-26 22:02:42.194889
+[0m22:02:42.195243 [debug] [Thread-1  ]: Began executing node model.silver_products_project.dbt_joined_events_products
+[0m22:02:42.195512 [debug] [Thread-1  ]: Timing info for model.silver_products_project.dbt_joined_events_products (execute): 2024-10-26 22:02:42.195471 => 2024-10-26 22:02:42.195482
+[0m22:02:42.197125 [debug] [Thread-1  ]: Finished running node model.silver_products_project.dbt_joined_events_products
+[0m22:02:42.197484 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m22:02:42.198101 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m22:02:42.198370 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m22:02:42.201271 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m22:02:42.201937 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 22:02:42.198579 => 2024-10-26 22:02:42.201891
+[0m22:02:42.202222 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m22:02:42.202455 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 22:02:42.202420 => 2024-10-26 22:02:42.202427
+[0m22:02:42.203033 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m22:02:42.203501 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m22:02:42.204063 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m22:02:42.204374 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m22:02:42.206657 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m22:02:42.207119 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 22:02:42.204568 => 2024-10-26 22:02:42.207083
+[0m22:02:42.207360 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m22:02:42.207579 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 22:02:42.207546 => 2024-10-26 22:02:42.207552
+[0m22:02:42.208130 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m22:02:42.208724 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:02:42.208937 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m22:02:42.209269 [debug] [MainThread]: Command end result
+[0m22:02:42.214184 [info ] [MainThread]: Done.
+[0m22:02:42.217208 [debug] [MainThread]: Acquiring new databricks connection 'generate_catalog'
+[0m22:02:42.217386 [info ] [MainThread]: Building catalog
+[0m22:02:42.218515 [debug] [ThreadPool]: Acquiring new databricks connection 'jaws'
+[0m22:02:42.222904 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m22:02:42.223178 [debug] [ThreadPool]: Using databricks connection "jaws"
+[0m22:02:42.223387 [debug] [ThreadPool]: On jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "jaws"} */
+show table extended in `jaws` like 'stg_products|dbt_joined_events_products|bronze_events|silver_products|bronze_users|bronze_products'
+  
+[0m22:02:42.223561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:02:43.434916 [debug] [ThreadPool]: SQL status: OK in 1.21 seconds
+[0m22:02:43.453865 [debug] [ThreadPool]: Databricks adapter: Getting table schema for relation `jaws`.`bronze_events`
+[0m22:02:43.454220 [debug] [ThreadPool]: Databricks adapter: Getting table schema for relation `jaws`.`bronze_products`
+[0m22:02:43.454433 [debug] [ThreadPool]: Databricks adapter: Getting table schema for relation `jaws`.`bronze_users`
+[0m22:02:43.454629 [debug] [ThreadPool]: Databricks adapter: Getting table schema for relation `jaws`.`silver_products`
+[0m22:02:43.454824 [debug] [ThreadPool]: Databricks adapter: Getting table schema for relation `jaws`.`stg_products`
+[0m22:02:43.456015 [debug] [ThreadPool]: On jaws: ROLLBACK
+[0m22:02:43.456191 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m22:02:43.456350 [debug] [ThreadPool]: On jaws: Close
+[0m22:02:43.679887 [info ] [MainThread]: Catalog written to /Users/kubaw/Documents/workspace-git/dpp2024-autumn-lab12-dbt/silver_products_project/target/catalog.json
+[0m22:02:43.680655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d339cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ca0d400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ca0d250>]}
+[0m22:02:43.681083 [debug] [MainThread]: Flushing usage events
+[0m22:02:44.194665 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:02:44.195719 [debug] [MainThread]: Connection 'jaws' was properly closed.
+
+
+============================== 2024-10-26 22:02:48.273925 | a162506d-9af8-440a-b8b8-63ff86b31e54 ==============================
+[0m22:02:48.273925 [info ] [MainThread]: Running with dbt=1.4.1
+[0m22:02:48.275936 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'port': 8080, 'open_browser': True, 'which': 'serve', 'indirect_selection': 'eager'}
+[0m22:02:48.276104 [debug] [MainThread]: Tracking: tracking
+[0m22:02:48.296120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba85d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba53f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba97a60>]}
+[0m22:02:48.298550 [info ] [MainThread]: Serving docs at 0.0.0.0:8080
+[0m22:02:48.298841 [info ] [MainThread]: To access from your browser, navigate to:  http://localhost:8080
+[0m22:02:48.299058 [info ] [MainThread]: 
+[0m22:02:48.299255 [info ] [MainThread]: 
+[0m22:02:48.299444 [info ] [MainThread]: Press Ctrl+C to exit.
+[0m22:05:00.430650 [debug] [MainThread]: Flushing usage events
+[0m22:05:00.978839 [info ] [MainThread]: ctrl-c
+
+
+============================== 2024-10-26 22:06:37.513753 | 4f347b93-c51e-4b24-82c4-e19b7d7ebb6d ==============================
+[0m22:06:37.513753 [info ] [MainThread]: Running with dbt=1.4.1
+[0m22:06:37.515397 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/kubaw/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m22:06:37.515590 [debug] [MainThread]: Tracking: tracking
+[0m22:06:37.528299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c479d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c447fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c48ea60>]}
+[0m22:06:37.559494 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:06:37.559689 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:06:37.563622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c72fe50>]}
+[0m22:06:37.567370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c576a60>]}
+[0m22:06:37.567577 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 372 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m22:06:37.567809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c447fa0>]}
+[0m22:06:37.568500 [info ] [MainThread]: 
+[0m22:06:37.569398 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:06:37.569969 [debug] [ThreadPool]: Acquiring new databricks connection 'list_schemas'
+[0m22:06:37.575635 [debug] [ThreadPool]: Using databricks connection "list_schemas"
+[0m22:06:37.575870 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m22:06:37.576024 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:06:38.469686 [debug] [ThreadPool]: SQL status: OK in 0.89 seconds
+[0m22:06:38.487260 [debug] [ThreadPool]: On list_schemas: Close
+[0m22:06:38.695270 [debug] [ThreadPool]: Acquiring new databricks connection 'list_None_jaws'
+[0m22:06:38.708926 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:38.709209 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m22:06:38.709394 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show tables in `jaws`
+  
+[0m22:06:38.709569 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:06:39.392670 [debug] [ThreadPool]: SQL status: OK in 0.68 seconds
+[0m22:06:39.408964 [debug] [ThreadPool]: Using databricks connection "list_None_jaws"
+[0m22:06:39.409846 [debug] [ThreadPool]: On list_None_jaws: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "connection_name": "list_None_jaws"} */
+show views in `jaws`
+  
+[0m22:06:39.875233 [debug] [ThreadPool]: SQL status: OK in 0.46 seconds
+[0m22:06:39.882828 [debug] [ThreadPool]: On list_None_jaws: ROLLBACK
+[0m22:06:39.883401 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m22:06:39.883841 [debug] [ThreadPool]: On list_None_jaws: Close
+[0m22:06:40.102345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c7eac10>]}
+[0m22:06:40.103172 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:40.103649 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m22:06:40.104645 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:06:40.105213 [info ] [MainThread]: 
+[0m22:06:40.120032 [debug] [Thread-1  ]: Began running node model.silver_products_project.dbt_joined_events_products
+[0m22:06:40.120538 [info ] [Thread-1  ]: 1 of 3 START sql view model jaws.dbt_joined_events_products .................... [RUN]
+[0m22:06:40.121358 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.dbt_joined_events_products'
+[0m22:06:40.121663 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.dbt_joined_events_products
+[0m22:06:40.125078 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.dbt_joined_events_products"
+[0m22:06:40.125846 [debug] [Thread-1  ]: Timing info for model.silver_products_project.dbt_joined_events_products (compile): 2024-10-26 22:06:40.121897 => 2024-10-26 22:06:40.125779
+[0m22:06:40.126129 [debug] [Thread-1  ]: Began executing node model.silver_products_project.dbt_joined_events_products
+[0m22:06:40.147581 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.dbt_joined_events_products"
+[0m22:06:40.148168 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:40.148349 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.dbt_joined_events_products"
+[0m22:06:40.148535 [debug] [Thread-1  ]: On model.silver_products_project.dbt_joined_events_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.dbt_joined_events_products"} */
+create or replace view `jaws`.`dbt_joined_events_products`
+  
+  
+  as
+    -- models/joined_events_products.sql
+
+WITH users AS (
+    SELECT *
+    FROM `jaws`.`bronze_users`
+),
+
+events AS (
+    SELECT *
+    FROM `jaws`.`bronze_events`
+),
+
+joined_df AS (
+    SELECT
+        users.user_id,
+        users.email,
+        events.device,
+        events.traffic_source,
+        events.event_previous_timestamp
+    FROM users
+    JOIN events ON users.user_id = events.user_id
+)
+
+SELECT *
+FROM joined_df
+ORDER BY email DESC
+
+[0m22:06:40.148691 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:06:41.573933 [debug] [Thread-1  ]: SQL status: OK in 1.43 seconds
+[0m22:06:41.590833 [debug] [Thread-1  ]: Timing info for model.silver_products_project.dbt_joined_events_products (execute): 2024-10-26 22:06:40.126326 => 2024-10-26 22:06:41.590753
+[0m22:06:41.591248 [debug] [Thread-1  ]: On model.silver_products_project.dbt_joined_events_products: ROLLBACK
+[0m22:06:41.591550 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m22:06:41.591827 [debug] [Thread-1  ]: On model.silver_products_project.dbt_joined_events_products: Close
+[0m22:06:41.810620 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d47b490>]}
+[0m22:06:41.812654 [info ] [Thread-1  ]: 1 of 3 OK created sql view model jaws.dbt_joined_events_products ............... [[32mOK[0m in 1.69s]
+[0m22:06:41.815099 [debug] [Thread-1  ]: Finished running node model.silver_products_project.dbt_joined_events_products
+[0m22:06:41.815710 [debug] [Thread-1  ]: Began running node model.silver_products_project.stg_products
+[0m22:06:41.816343 [info ] [Thread-1  ]: 2 of 3 START sql view model jaws.stg_products .................................. [RUN]
+[0m22:06:41.817480 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.stg_products'
+[0m22:06:41.817885 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.stg_products
+[0m22:06:41.821951 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.stg_products"
+[0m22:06:41.823592 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (compile): 2024-10-26 22:06:41.818198 => 2024-10-26 22:06:41.823533
+[0m22:06:41.823944 [debug] [Thread-1  ]: Began executing node model.silver_products_project.stg_products
+[0m22:06:41.832195 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.stg_products"
+[0m22:06:41.833005 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:41.833290 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.stg_products"
+[0m22:06:41.833560 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.stg_products"} */
+create or replace view `jaws`.`stg_products`
+  
+  
+  as
+    -- models/staging/products/stg_products.sql
+WITH source_data AS (
+    SELECT *
+    FROM `jaws`.`bronze_products`
+)
+SELECT * FROM source_data
+
+[0m22:06:41.833768 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:06:43.832937 [debug] [Thread-1  ]: SQL status: OK in 2.0 seconds
+[0m22:06:43.844874 [debug] [Thread-1  ]: Timing info for model.silver_products_project.stg_products (execute): 2024-10-26 22:06:41.824198 => 2024-10-26 22:06:43.844777
+[0m22:06:43.845396 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: ROLLBACK
+[0m22:06:43.845772 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m22:06:43.846100 [debug] [Thread-1  ]: On model.silver_products_project.stg_products: Close
+[0m22:06:44.053431 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d4c18b0>]}
+[0m22:06:44.055211 [info ] [Thread-1  ]: 2 of 3 OK created sql view model jaws.stg_products ............................. [[32mOK[0m in 2.24s]
+[0m22:06:44.056059 [debug] [Thread-1  ]: Finished running node model.silver_products_project.stg_products
+[0m22:06:44.057551 [debug] [Thread-1  ]: Began running node model.silver_products_project.silver_products
+[0m22:06:44.058326 [info ] [Thread-1  ]: 3 of 3 START sql view model jaws.silver_products ............................... [RUN]
+[0m22:06:44.059499 [debug] [Thread-1  ]: Acquiring new databricks connection 'model.silver_products_project.silver_products'
+[0m22:06:44.059933 [debug] [Thread-1  ]: Began compiling node model.silver_products_project.silver_products
+[0m22:06:44.065580 [debug] [Thread-1  ]: Writing injected SQL for node "model.silver_products_project.silver_products"
+[0m22:06:44.066511 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (compile): 2024-10-26 22:06:44.060254 => 2024-10-26 22:06:44.066452
+[0m22:06:44.066857 [debug] [Thread-1  ]: Began executing node model.silver_products_project.silver_products
+[0m22:06:44.072511 [debug] [Thread-1  ]: Writing runtime sql for node "model.silver_products_project.silver_products"
+[0m22:06:44.073266 [debug] [Thread-1  ]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:44.073527 [debug] [Thread-1  ]: Using databricks connection "model.silver_products_project.silver_products"
+[0m22:06:44.073793 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: /* {"app": "dbt", "dbt_version": "1.4.1", "dbt_databricks_version": "1.4.1", "databricks_sql_connector_version": "2.3.0", "profile_name": "silver_products_project", "target_name": "dev", "node_id": "model.silver_products_project.silver_products"} */
+create or replace view `jaws`.`silver_products`
+  
+  
+  as
+    -- models/silver/silver_products.sql
+WITH products AS (
+    SELECT * FROM `jaws`.`stg_products`
+)
+
+SELECT
+    *
+FROM products
+
+[0m22:06:44.074036 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:06:46.344982 [debug] [Thread-1  ]: SQL status: OK in 2.27 seconds
+[0m22:06:46.349738 [debug] [Thread-1  ]: Timing info for model.silver_products_project.silver_products (execute): 2024-10-26 22:06:44.067114 => 2024-10-26 22:06:46.349647
+[0m22:06:46.350306 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: ROLLBACK
+[0m22:06:46.350668 [debug] [Thread-1  ]: Databricks adapter: NotImplemented: rollback
+[0m22:06:46.350995 [debug] [Thread-1  ]: On model.silver_products_project.silver_products: Close
+[0m22:06:46.566068 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4f347b93-c51e-4b24-82c4-e19b7d7ebb6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d41b9a0>]}
+[0m22:06:46.567564 [info ] [Thread-1  ]: 3 of 3 OK created sql view model jaws.silver_products .......................... [[32mOK[0m in 2.51s]
+[0m22:06:46.568465 [debug] [Thread-1  ]: Finished running node model.silver_products_project.silver_products
+[0m22:06:46.570686 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:06:46.571183 [debug] [MainThread]: On master: ROLLBACK
+[0m22:06:46.571548 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:06:46.793313 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m22:06:46.795020 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m22:06:46.795438 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m22:06:46.795898 [debug] [MainThread]: On master: ROLLBACK
+[0m22:06:46.796291 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m22:06:46.796680 [debug] [MainThread]: On master: Close
+[0m22:06:47.003307 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:06:47.004819 [debug] [MainThread]: Connection 'model.silver_products_project.silver_products' was properly closed.
+[0m22:06:47.006784 [info ] [MainThread]: 
+[0m22:06:47.007491 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 9.44 seconds (9.44s).
+[0m22:06:47.008370 [debug] [MainThread]: Command end result
+[0m22:06:47.018002 [info ] [MainThread]: 
+[0m22:06:47.018595 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:06:47.019050 [info ] [MainThread]: 
+[0m22:06:47.019468 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m22:06:47.019941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c576760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d473fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c72feb0>]}
+[0m22:06:47.020280 [debug] [MainThread]: Flushing usage events

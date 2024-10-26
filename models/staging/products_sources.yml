@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: jaws
+    tables:
+      - name: bronze_products
+      - name: bronze_events
+      - name: bronze_users
